@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import AdminLayout from './AdminLayout.vue'
 
-const API = 'https://localhost:3001/api'
+const API = import.meta.env.VITE_API_URL || 'https://localhost:3001/api'
 const headersAuth = () => ({ Authorization: `Bearer ${localStorage.getItem('petcard_token')}` })
 
 const busqueda = ref('')
