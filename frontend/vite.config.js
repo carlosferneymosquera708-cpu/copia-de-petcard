@@ -4,8 +4,8 @@ import fs from 'fs';
 
 export default defineConfig(({ command }) => ({
   plugins: [vue()],
-  // Ruta base para GitHub Pages: https://<usuario>.github.io/copia-de-petcard/
-  base: command === 'build' ? '/copia-de-petcard/' : '/',
+  // Netlify sirve el sitio en la raíz, sin subruta
+  base: '/',
   // El HTTPS con certificados locales solo se usa en desarrollo (npm run dev)
   server: {
     host: 'localhost',

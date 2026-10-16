@@ -1,0 +1,12 @@
+[build]
+  command = "cd frontend && npm ci && npm run build"
+  publish = "frontend/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Permite recargar rutas internas de Vue Router sin error 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
